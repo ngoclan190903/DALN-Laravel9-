@@ -1,72 +1,36 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Quản lý hệ thống rạp chiếu phim
+1.1. Đặt vấn đề 
+Hiện nay hình thức xem phim chiếu rạp không còn xa lạ với chúng ta, nó không chỉ đơn thuần để giải trí, giảm bớt áp lực, mà còn mang lại những trải nghiệm, kích thích trí tưởng tượng và tạo ra những cảm xúc mạnh mẽ. 
+Vì lẽ đó nhu cầu xem phim chiếu rạp của con người ngày càng tăng, nó dần trở thành một phần không thể thiếu trong cuộc sống, nắm bắt được điều đó đã có rất nhiều cụm rạp được xây dựng nằm rải rác khắp Việt Nam nhằm đáp ứng nhu cầu của khách hàng.  
+Để vừa giúp quản trị viên trong việc thống kê, quản lý được số lượng cụm rạp lớn vừa tạo sự thuận tiện cho khách hàng khi giờ đây khách hàng chỉ cần ngồi tại nhà vẫn có thể chọn suất chiếu và mua vé mà không cần phải đến trực tiếp tại rạp  thì nhóm em quyết định thực hiện việc thiết kế, xây dựng website quản lý hệ thống rạp chiếu phim dành cho quản trị viên lẫn khách hàng. 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+1.2. Giải quyết vấn đề 
+Nhằm mang đến những thuận lợi đã nêu ở trên, website quản lý hệ thống rạp chiếu phim của nhóm em đã đưa ra những thử thách như sau. 
+Giao diện người dùng: 
+− Xây dựng website thân thiện với người dùng. 
+− Giao diện bắt mắt, dễ sử dụng tăng trải nghiệm cho người dùng. − Thuận tiện trong việc đặt vé, mua combo online. 
+− Trang thông tin cá nhân lưu giữ mã vé, mã khuyến mãi, điểm tích lũy….. 
+− Hiển thị thông tin các phim đang và sắp chiếu. 
+− Hiển thị thông tin rạp có trong hệ thống. 
+− Cập nhật những tin tức mới về phim hay những ưu đãi dành cho người dùng. 
+Giao diện quản trị: 
+− Xây dựng website thân thiện với quản trị viên. 
+− Các chức năng cơ bản CRUD (create, read, update, delete) dành cho phim. 
+− Quản trị viên có thể thêm, chỉnh sửa cũng như thay đổi trạng thái của rạp, phòng, ghế… 
+− Tạo lịch chiếu mới, sắp xếp lịch chiếu, chỉnh sửa thay đổi ngày giờ chiếu. 
+− Tạo các bài viết về sự kiện, tin tức để hiển thị bên trang người dùng. 
+WEBSITE QUẢN LÝ HỆ THỐNG RẠP CHIẾU PHIM
+− Quản lý thông tin của người dùng, nhân viên 
+− Cấp quyền, phân vai trò cho tài khoản nhân viên, giúp thuận tiện trong việc điều hành, quản lý nội bộ. 
+− Thống kê, so sánh doanh thu từng rạp trong hệ thống. 
+− Thống kê doanh thu theo phim, thể loại phim, thức ăn. 
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Install Laravel
-
--   Step 1 : git clone https://github.com/....
--   Step 2 : composer install
--   Step 3 : php artisan key:generate
--   Step 4 : create database with name cinema and setting in .env
--   Step 5 : php artisan migrate:fresh --seed
--   Step 6 : composer dumpautoload
--   Step 7 : php artisan serve
-
-## Command Line
-
--   create database and model: "php artisan make:model Example -m"
--   create Controller: "php artisan make:controller ExampleController"
--   rollback database and seed: "php artisan migrate:fresh --seed"
--   rollback database: "php artisan migrate:rollback"
--   run database: "php artisan migrate"
--   run seed: "php artisan db:seed"
--   composer require spatie/laravel-permission
--   composer require cloudinary-labs/cloudinary-laravel
--   composer require milon/barcode
--   composer require picqer/php-barcode-generator
--   composer update
--   php artisan vendor:publish --provider="CloudinaryLabs\CloudinaryLaravel\CloudinaryServiceProvider" --tag="cloudinary-laravel-config"
--   composer dumpautoload
-
-## Documentation
-
--   https://github.com/doo/scanbot-sdk-example-web/tree/master
--   https://docs.scanbot.io/document-scanner-sdk/web/introduction/
--   https://spatie.be/docs/laravel-permission/v5/introduction
--   https://github.com/milon/barcode
--   https://github.com/picqer/php-barcode-generator
--   https://github.com/cloudinary-devs/cloudinary-laravel#installation
-
-## Config Mail in .ENV
-
--   Create application password: https://support.google.com/mail/answer/185833?hl=vi to config:
--   MAIL_USERNAME = example@gmail.com
--   MAIL_PASSWORD = application password
--   MAIL_FROM_ADDRESS = example@gmail.com
--   MAIL_NAME = example
-
-## Config Cloudinary in .ENV
-
--   Create account in https://console.cloudinary.com/ to config:
--   CLOUD_NAME = Cloud Name
--   CLOUDINARY_URL = API Environment variable
--   CLOUDINARY_NOTIFICATION_URL = API Environment variable
+Ngôn ngữ được sử dụng : PHP, Javascript, Jquery Ajax
+Công nghệ sử dụng trong project này là : 
+1. Framework Laravel
+2. MySQL - Database
+3. Bootstrap
+4. Google Lighthouse
+5. Jmeter
+6. Railway
+7. Github
